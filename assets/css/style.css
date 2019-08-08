@@ -9,9 +9,9 @@ body {
 .game {
     text-align: center;
     margin-top: 350px;
-    background: rgba(240, 225, 225, 0.8);
+    background: rgba(240, 225, 225, 0.9);
     height: 380px;
-    position: relative;
+    position: absolute;
     bottom: 220px;
     width: 50%;
     right: 50px;
@@ -29,17 +29,14 @@ body {
     position: relative;
     bottom: 53px;
     border-bottom: rgb(255, 144, 41) dotted 5px;
-    padding-bottom: 20px;
-
-    
+    padding-bottom: 20px;   
 }
 
 #word-in-progress {
     font-size: 50px;
     color: rgb(15, 175, 238);
-    position: relative;
-    bottom: 25px;
-    
+    text-align: center;
+    margin-top: 20px;
 }
 
 
@@ -62,4 +59,12 @@ h1 {
 #footer {
     width: 100%;
     background: rgba(240, 225, 225, 0.3);
+}
+
+#statement {
+    position: absolute;
+    bottom: 300px;
+    left: 160px;
+    color: #3de40f;
+    font-weight: bold;
 }

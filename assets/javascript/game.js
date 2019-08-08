@@ -13,6 +13,7 @@ let lossesText = document.getElementById("losses-text");
 let guessesLeftText = document.getElementById("guessesleft-text");
 let lettersGuessedText = document.getElementById("lettersguessed-text");
 let wordInProgress = document.getElementById("word-in-progress");
+let statement = document.getElementById("statement");
 //selecting random word//
 let randomWord = words[Math.floor(Math.random() * words.length)];
 console.log("rand", randomWord);
@@ -38,28 +39,32 @@ for (let i = 0; i < newWords.length; i++) {
 //functions//
 function updateWins() {
     document.querySelector("#wins-text").textContent = "wins: " + wins;
+    statement.textContent = "Nice One!!!"
   }
 
 function updateLosses() {
     document.querySelector("#losses-text").textContent = "losses: " + losses;
+    statement.textContent = "You lost, The correct word was " + randomWord;
 }
 
 function reset() {
     //main variables//
-     newWords = [];
-     guessesLeft = 12;
+    newWords = [];
+    guessesLeft = 12;
+    lettersGuessed = [];
     //references to html//
-     directionsText = document.getElementById("directions-text");
-     winsText = document.getElementById("wins-text");
-     lossesText = document.getElementById("losses-text");
-     guessesLeftText = document.getElementById("guessesleft-text");
-     lettersGuessedText = document.getElementById("lettersguessed-text");
-     wordInProgress = document.getElementById("word-in-progress");
+    directionsText = document.getElementById("directions-text");
+    winsText = document.getElementById("wins-text");
+    lossesText = document.getElementById("losses-text");
+    guessesLeftText = document.getElementById("guessesleft-text");
+    lettersGuessedText = document.getElementById("lettersguessed-text");
+    wordInProgress = document.getElementById("word-in-progress");
+    statement = document.getElementById("statement");
     //selecting random word//
-     randomWord = words[Math.floor(Math.random() * words.length)];
+    randomWord = words[Math.floor(Math.random() * words.length)];
     console.log("rand", randomWord);
     //adding blanks in place of the random word//
-     underscore = randomWord.split('');
+    underscore = randomWord.split('');
     newUnderscore = underscore.forEach(function (item) {
         newWords.push(item.replace(item, '_'));
     });
@@ -73,26 +78,25 @@ function reset() {
             newWords[i] = userGuess;
             wordInProgress.textContent = newWords.join('');
         }
-    
-    }
-      
+    }      
 }
 
 //conditionals//
 if (newWords.join('') === randomWord) {
     wins++
-    updateWins();
+    updateWins(); 
     reset();
 }
 
 if (userGuess) {
+    lettersGuessed.push(userGuess)
     guessesLeft--;
 }
 
 if (guessesLeft === 0) {
     losses++;
     updateLosses();
-    reset();
+    reset()
 }
 
 //default text//
@@ -100,8 +104,9 @@ directionsText.textContent = "";
 winsText.textContent = "wins: " + wins;
 lossesText.textContent = "losses: " + losses;
 guessesLeftText.textContent = "guesses left: " + guessesLeft;
-lettersGuessedText.textContent = "You guessed: " + userGuess; 
+lettersGuessedText.textContent = "You guessed: " + lettersGuessed; 
 }
+
 
 
 
