@@ -5,5 +5,6 @@ This is a simple word guess game created using vanilla javascript.  It is tropic
 # Technologies Used
 
 - Javascript
+- CSS
 - Git
 - Github
