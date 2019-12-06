@@ -4,7 +4,7 @@ This is a simple word guess game created using vanilla javascript.  It is tropic
 
 ## Preview
 
-![Preview](https://github.com/andrew129/andrew129.github.io/blob/master/client/assets/images/Screen Shot 2019-08-05 at 7.30.05 PM.png?raw=true)
+![Preview](https://github.com/andrew129/andrew129.github.io/blob/master/assets/images/Screen Shot 2019-08-05 at 7.30.05 PM.png?raw=true)
 
 ## Technologies Used
 
