@@ -4,7 +4,12 @@ This is a simple word guess game created using vanilla javascript.  It is tropic
 
 # Technologies Used
 
-- Javascript
+- Vanilla JS
+- HTML
 - CSS
 - Git
 - Github
+
+## Link to Play
+
+Go here https://andrew129.github.io/Word-Guess-Game/ to try out my game
