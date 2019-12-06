@@ -1,8 +1,12 @@
-# Word-Guess-Game
+# Word Guess Game
 
 This is a simple word guess game created using vanilla javascript.  It is tropical themed and very forgiving.  Follow the instructions on the page to play.
 
-# Technologies Used
+## Preview
+
+![Preview](https://github.com/andrew129/andrew129.github.io/blob/master/client/src/images/phocus.png?raw=true)Screen Shot 2019-08-05 at 7.30.05 PM.png
+
+## Technologies Used
 
 - Vanilla JS
 - HTML
